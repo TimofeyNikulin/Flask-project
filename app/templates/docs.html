@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="../static/css/styleDocs.css">
+{% endblock %}
+
+{% block content %}
+    <div class="app">
+        <h1>Документы и методические пособия</h1>
+        <hr>
+        <p>Для работы вожатым необходимо знать правовую базу, для упрощения изучения материалов при подготовке, в этом разделе собрано множество документов, а также методические пособия</p>
+        <ul>
+            {% for name, url in urls.items() %}
+                <li>
+                    <a href="{{ url_for( url ) }}">
+                        <p>{{ name }}</p>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+{% endblock %}

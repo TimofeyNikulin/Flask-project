@@ -1,0 +1,14 @@
+{% extends './base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="../../static/css/styleDocs.css">
+{% endblock %}
+
+{% block content %}
+    {% for game in games %}
+        <div class="game">
+            <h1>{{ game.id }}. {{ game.title }}</h1>
+            <p>{{ game.description }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,67 @@
+h1, hr, h2, p, img, table {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+main a {
+    color: black;
+    text-decoration: none;
+}
+
+main a:hover {
+    color: #212163;
+}
+
+hr {
+    margin-right: 20px;
+}
+
+p {
+    font-size: 24px;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin-left: 30px;
+}
+
+.app {
+    height: 77.3vh;
+}
+
+.qr-code {
+    height: 450px;
+    display: flex;
+}
+
+.qr-code h1 {
+    margin-top: 200px;
+}
+
+.game {
+    margin-top: 20px;
+}
+
+td {
+    vertical-align: top;
+}
+
+table {
+    margin-bottom: 20px;
+}
+
+main li > ul {
+    display: block;
+    position: relative;
+    top: 0;
+}
+
+ol {
+    margin-bottom: 20px;
+}
+
+aside h1, aside p, aside h3 {
+    margin: 0;
+}

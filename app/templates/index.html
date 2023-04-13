@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="../static/css/styleIndex.css">
+{% endblock %}
+
+{% block content %}
+
+    <a href="{{ url_for('who_is_a_counselor') }}">
+        <div class="card">
+            <div class="firstCard circle">
+                <img src="../static/img/index/кто_такой_вожатый.png" alt="">
+            </div>
+            <div class="firstCard square">
+                <h1>Кто такой вожатый?</h1>
+                <p>Вожатый – специалист по организации детских развлекательных мероприятий и отдыха. Он объединяет в себе обязанности педагога и воспитателя, а также несет ответственность за жизнь и здоровье детей.</p>
+            </div>
+        </div>
+    </a>
+    <a href="{{ url_for('what_does_a_counselor_do') }}">
+        <div class="card">
+            <div class="secondCard circle">
+                <img src="../static/img/index/чем_занимается_вожатый.png" alt="">
+            </div>
+            <div class="secondCard square">
+                <h1>Чем занимается вожатый?</h1>
+                <p>Работа вожатого предполагает круглосуточное взаимодействие с детьми и носит сезонный характер. Во время смены специалист контролирует дежурство и соблюдение режима дня, занимается подготовкой и проведением досуговых мероприятий, обеспечивает безопасность и комфорт детей, находящихся в группе.</p>
+            </div>
+        </div>
+    </a>
+    <a href="{{ url_for('who_can_become_a_counselor') }}">
+        <div class="card">
+            <div class="thirdCard circle">
+                <img src="../static/img/index/кто_может_стать_вожатым.png" alt="">
+            </div>
+            <div class="thirdCard square">
+                <h1>Кто может стать вожатым?</h1>
+                <p>Чаще всего вожатыми становятся те, у кого есть тяга к общению с детьми и время. Поэтому обычно в летние лагеря устраиваются студенты и учителя: у них длинные летние каникулы.</p>
+            </div>
+        </div>
+    </a>
+
+{% endblock %}

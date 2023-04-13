@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    {% block head %} {% endblock %}
+    <title>{{ title }}</title>
+</head>
+<body>
+    {% if current_user.is_authenticated %}
+        <p hidden id="user_id">{{ current_user.id }}</p>
+    {% endif %}
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Главная</a></li>
+                <li class="list">
+                    <a href="{{ url_for('docs') }}">Документация</a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="{{ url_for('documents') }}">Документы</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('games_and_methodics') }}">Игры, методики диагностики ребенка</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('candle') }}">Свечки</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('templates') }}">Шаблоны</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('detachment_corner') }}">Отрядный уголок</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('plans_of_events') }}">Правила составления план-сеток мероприятий</a>
+                        </li>
+                    </ul>
+                </li>
+                {% if current_user.is_authenticated %}
+                    <li><a href="{{ url_for('logout') }}">{{ current_user.name }}</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('login') }}">Войти</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <aside style="height: auto;">
+            {% if current_user.is_authenticated %}
+                <h2>{{ current_user.name }}</h2>
+                <h2>Чат общего обсуждения</h2>
+                <div class="chat">
+                    {% set data = get('http://127.0.0.1:5000/api/data').json() %}
+                    {% for message in data.messages %}
+                        {% for user in data.users %}
+                            {% for k, v in user.items() %}
+                                {% if message.user_id == v %}
+                                    <div class="message">
+                                        <h3>{{ k }}</h3>
+                                        <p>{{ message.text }}</p>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+                <form action="" class="send_message" method="post">
+                    <input type="text" name="" id="text" class="send">
+                    <button type="button" id="button"><img src="../static/img/index/arrow.png" alt="" style="height: 30px; width: 30px; margin: 0"></button>
+                </form>
+            {% else %}
+                <h1>Чтобы подключиться к общему обсуждению необходимо сначала войти на сайт.</h1>
+            {% endif %}
+        </aside>
+        <main>
+            {% block content %}
+
+            {% endblock %}
+        </main>
+    </div>
+
+    <footer>
+        
+    </footer>
+    {% if current_user.is_authenticated %}
+        <script>
+            let button = document.querySelector('#button');
+            socket = io()
+            socket.connect('http://127.0.0.1:5000/')
+            button.addEventListener('click', function() {
+                let text = document.querySelector('#text');
+                let user_id = document.querySelector('#user_id').textContent;
+                let text_message = text.value
+                text.value = ''
+                let msg = {
+                    'text': text_message,
+                    'user_id': user_id
+                }
+                console.log(msg)
+                socket.send(msg)
+            })
+            socket.on('my responce', function(msg) {
+                let chat = document.querySelector('.chat');
+                chat.insertAdjacentHTML('afterbegin', `<div class="message"><h3>${msg.user}</h3><p>${msg.text}</p></div>`)
+            })
+        </script>
+    {% endif %}
+</body>
+</html>

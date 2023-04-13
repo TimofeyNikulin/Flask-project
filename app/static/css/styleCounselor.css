@@ -1,0 +1,23 @@
+h1, hr, h2, p, img {
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+hr {
+    margin-right: 20px;
+}
+
+p {
+    font-size: 24px;
+}
+
+img {
+    width: 800px;
+    height: 400px;
+    object-fit: cover;
+    margin-left: 300px;
+}
+
+aside h1, aside p, aside h3 {
+    margin: 0;
+}

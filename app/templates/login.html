@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block head %} 
+    <link rel="stylesheet" href="../static/css/styleForm.css">
+    <style>
+        .content {
+            height: 769px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div>
+        <form action="" method="post">
+            <div class="pole">
+                <h1 style="margin: 0 auto; font-size: 48px;">Вход</h1>
+                <div>
+                    {{ form.csrf_token }}
+                </div>
+                {% for field in form if field.name != 'csrf_token' %}
+                    <div class="input">
+                            {{ field.label() }}
+                            {{ field() }}
+                        {% for error in field.errors %}
+                            <div class="error">{{ error }}</div>
+                        {% endfor %}
+                    </div>
+                {% endfor %} 
+                <div class="submit">
+                    <input type="submit" value="Войти" id="submit">
+                </div>
+            </div>
+            <div>
+                <p style="font-size: 26px; margin: 20px 20px;">Если вы ещё не зарегистрированны. То вы можете пройти <a style="text-decoration: none; color: #323294;" href="{{ url_for('register') }}">регистрацию</a></p>
+            </div>         
+        </form>
+        <div>
+            <p>{{ message }}</p>
+        </div>
+        
+    </div>
+{% endblock %}
