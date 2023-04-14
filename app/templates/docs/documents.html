@@ -2,6 +2,23 @@
 
 {% block head %}
     <link rel="stylesheet" href="../static/css/styleDocs.css">
+
+    <style>
+        .download {
+            display: block;
+            color: white;
+            background-color: #2B2BA0;
+            padding-left: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            width: 250px;
+        }
+
+        .download:hover {
+            background: #212163;
+            color: white;
+        }
+    </style>
 {% endblock %}
 
 {% block content %}
@@ -33,6 +50,9 @@
     <div class="qr-code">
         <img src="../../static/img/qr-коды/Об основных гарантиях прав ребенка в Российской Федерации.png" alt="" class="qr-code-image">
         <h1>Об основных гарантиях прав ребенка в Российской Федерации</h1>
+    </div>
+    <div class="methodichka">
+        <h1>Методическое пособие для вожатых. <a class="download" href="../../static/files/ТЫ - БУДУЩИЙ ВОЖАТЫЙ.pdf" download="" title="Методическое пособие для вожатых">Скачать файл</a></h1>
     </div>
     <br>
 {% endblock %}

@@ -34,6 +34,18 @@
         .example {
             overflow: hidden;
             margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .accordion_item:hover {
+            background: linear-gradient(90deg, #5F1826, rgb(43, 43, 160));
+            transition: background 0.4s ease;
+            color: white;
+        }
+
+        .accordion_item.active {
+            background: linear-gradient(90deg, #5F1826, rgb(43, 43, 160));
+            color: white;
         }
     </style>
 {% endblock %}
