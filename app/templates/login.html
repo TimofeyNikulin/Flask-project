@@ -32,11 +32,11 @@
             </div>
             <div>
                 <p style="font-size: 26px; margin: 20px 20px;">Если вы ещё не зарегистрированны. То вы можете пройти <a style="text-decoration: none; color: #323294;" href="{{ url_for('register') }}">регистрацию</a></p>
+            </div>
+            <div>
+                <p>{{ message }}</p>
             </div>         
         </form>
-        <div>
-            <p>{{ message }}</p>
-        </div>
         
     </div>
 {% endblock %}
