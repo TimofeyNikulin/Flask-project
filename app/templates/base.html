@@ -56,7 +56,7 @@
                 <h2>{{ current_user.name }}</h2>
                 <h2>Чат общего обсуждения</h2>
                 <div class="chat">
-                    {% set data = get('http://127.0.0.1:5000/api/data').json() %}
+                    {% set data = get('https://gol-peresvet-376.glitch.me/api/data').json() %}
                     {% for message in data.messages %}
                         {% for user in data.users %}
                             {% for k, v in user.items() %}
@@ -92,7 +92,7 @@
         <script>
             let button = document.querySelector('#button');
             socket = io()
-            socket.connect('http://127.0.0.1:5000/')
+            socket.connect('https://gol-peresvet-376.glitch.me/')
             button.addEventListener('click', function() {
                 let text = document.querySelector('#text');
                 let user_id = document.querySelector('#user_id').textContent;
