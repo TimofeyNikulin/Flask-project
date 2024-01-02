@@ -5,39 +5,181 @@
 {% endblock %}
 
 {% block content %}
-
-    <a href="{{ url_for('who_is_a_counselor') }}">
-        <div class="card">
-            <div class="firstCard circle">
-                <img src="../static/img/index/кто_такой_вожатый.png" alt="">
-            </div>
-            <div class="firstCard square">
-                <h1>Кто такой вожатый?</h1>
-                <p>Вожатый – специалист по организации детских развлекательных мероприятий и отдыха. Он объединяет в себе обязанности педагога и воспитателя, а также несет ответственность за жизнь и здоровье детей.</p>
-            </div>
-        </div>
-    </a>
-    <a href="{{ url_for('what_does_a_counselor_do') }}">
-        <div class="card">
-            <div class="secondCard circle">
-                <img src="../static/img/index/чем_занимается_вожатый.png" alt="">
-            </div>
-            <div class="secondCard square">
-                <h1>Чем занимается вожатый?</h1>
-                <p>Работа вожатого предполагает круглосуточное взаимодействие с детьми и носит сезонный характер. Во время смены специалист контролирует дежурство и соблюдение режима дня, занимается подготовкой и проведением досуговых мероприятий, обеспечивает безопасность и комфорт детей, находящихся в группе.</p>
-            </div>
-        </div>
-    </a>
-    <a href="{{ url_for('who_can_become_a_counselor') }}">
-        <div class="card">
-            <div class="thirdCard circle">
-                <img src="../static/img/index/кто_может_стать_вожатым.png" alt="">
-            </div>
-            <div class="thirdCard square">
-                <h1>Кто может стать вожатым?</h1>
-                <p>Чаще всего вожатыми становятся те, у кого есть тяга к общению с детьми и время. Поэтому обычно в летние лагеря устраиваются студенты и учителя: у них длинные летние каникулы.</p>
+    <div class="firstPart">
+        <div class="leftSide">
+            <div class="menu">
+                <div class="elipse1">
+                    <img src="../static/img/index/Ellipse 1.png" alt="">
+                    <a href="#secondPart">
+                        <h1 class="elipseText1">Кто такой вожатый?</h1>
+                    </a>
+                </div>
+                <div class="elipse2">
+                    <img src="../static/img/index/Ellipse 2.png" alt="">
+                    <a href="#fourthPart">
+                        <h1 class="elipseText2">Кто может стать вожатым?</h1>
+                    </a>
+                </div>
+                <div class="elipse3">
+                    <img src="../static/img/index/Ellipse 3.png" alt="">
+                    <a href="#thirdPart">
+                        <h1 class="elipseText3">Чем занимается вожатый?</h1>
+                    </a>
+                </div>
             </div>
         </div>
-    </a>
-
+        <div class="rightSide">
+            <div class="card">
+                <div class="headOfCard">
+                    <h2>О проекте</h2>
+                    <img src="../static/img/index/arrow.png" alt="">
+                </div>
+                <p>Сайт разработан для реализации дистанционного обучения по направлению вожатского мастерства</p>
+            </div>
+            <div class="card">
+                <div class="headOfCard">
+                    <h2>Лица проекта</h2>
+                    <img src="../static/img/index/arrow.png" alt="">
+                </div>
+                <p>Над проектом работали множество креативных и трудолюбивых людей, которые являются настоящими профессионалами в своем деле</p>
+            </div>
+            <div class="card">
+                <div class="headOfCard">
+                    <h2>Партнеры</h2>
+                    <img src="../static/img/index/arrow.png" alt="">
+                </div>
+                <p>Для реализации проекта привлечены лучшие площадки по подготовке вожатых</p>
+            </div>
+        </div>
+    </div>
+    <a name="secondPart"></a>
+    <div class="secondPart">
+        <div class="front1">
+            <div class="left">
+                <div class="firstCard card1">
+                    <p>Тот, кто имеет огромное тепрпение и стремление создавать что-то новое.</p>
+                </div>
+                <div class="secondCard card1">
+                    <p>Универсальный человек, который примеряет на себя сразу несколько профессий: педагог, психолог, аниматор.</p>
+                </div>
+            </div>
+            <div class="thirdCard">
+                <img src="../static/img/index/new_3.png" alt="">
+                <p>Кто такой вожатый?</p>
+            </div>
+            <div class="right">
+                <div class="fourthCard card1">
+                <p>Вожатый - это тот, кому можно доверится, это человек сопровождающий тебя весь твой путь, проводящий тебя через все трудности и невзгоды смены.</p>
+                </div>
+                <div class="fifthCard card1">
+                    <p>Вожатый — это профессионал-педагог, который занимается организацией и проведением досуговой и педагогической работы с детьми и подростками в лагерях.</p>
+                </div>
+            </div>
+        </div>
+        <img src="../static/img/index/1.jpg" alt="" class="backImage1"></div>
+    </div>
+    <a name="thirdPart"></a>
+    <div class="thirdPart">
+        <div class="front2">
+            <div class="top">
+                <div class="firstCard card2">
+                    <p>Создаёт благоприятные условия, Осуществляет заботу о здоровье и безопасности детей(или кого ему дали)</p>
+                </div>
+                <div class="thirdCard">
+                    <img src="../static/img/index/new_1.png" alt="">
+                    <p>Чем занимается вожатый?</p>
+                </div>
+                <div class="secondCard card2">
+                    <p>Подталкивает детей на выявление каких-то качеств, создаёт лагерную атмосферу, подаёт пример детям, сплочает отряд, учит жизни</p>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="fourthCard card2">
+                    <p>- следит за поведением детей</p>
+                    <p>- контролирует эмоциональный фон в отряде</p>
+                    <p>- следит за коммуникацией между детьми</p>
+                    <p>- сопровождает отряд на мероприятия и с мероприятий</p>
+                    <p>- следит за режимом</p>
+                    <p>- помогает детям разрешить появляющиеся проблемы</p>
+                    <p>- является ответственным в отряде</p>
+                    <p>- играет и развлекает детей в свободное время</p>
+                    <p>- обучает детей новому</p>
+                    <p>- занимает и придумывает интересные занятия в свободное время или создаёт с отрядом их уголок</p>
+                    <p>- проводит зарядку для детей</p>
+                </div>
+                <div class="fifthCard card2">
+                    <p>Он как главный член большой семьи и только он может создать дружную атмосферу, благодаря которой детям запомниться смена на всю жизнь</p>
+                </div>
+            </div>
+        </div>
+        <img src="../static/img/index/2.jpg" alt="" class="backImage2"></div>
+    </div>
+    <a name="fourthPart"></a>
+    <div class="fourthPart">
+        <div class="front3">
+            <div class="left">
+                <div class="card3">
+                    <p>Активный</p>
+                </div>
+                <div class="card3">
+                    <p>Творческий</p>
+                </div>
+                <div class="card3">
+                    <p>Ответственный</p>
+                </div>
+                <div class="card3">
+                    <p>Заботливый</p>
+                </div>
+            </div>
+            <div class="thirdCard">
+                <img src="../static/img/index/new_2.png" alt="">
+                <p>Кто может стать вожатым?</p>
+            </div>
+            <div class="right">
+                <div class="card3">
+                    <p>Неравнодушный</p>
+                </div>
+                <div class="card3">
+                    <p>Инициативный</p>
+                </div>
+                <div class="card3">
+                    <p>Мечтающий</p>
+                </div>
+                <div class="card3">
+                    <p>Любящий детей</p>
+                </div>
+            </div>
+        </div>
+        <img src="../static/img/index/3.jpg" alt="" class="backImage3"></div>
+    </div>
+    <div class="fifthPart">
+        <div class="description">
+            <div class="line">
+                <p>О проекте</p>
+            </div>
+            <p class="textFourth">Проект направлен на реализацию программы по обучению обучающихся образовательных организаций, в возрасте от 13 до 18 лет, вожатскому делу. Проект способствует формированию профессиональных навыков детей в области педагогики и наставничества, а также созданию молодежного сообщества.
+                Также проект реализует волонтерскую деятельность и помогает лагерям в организации смен, выездов, слетов и т.д.
+            </p>
+            <div class="btnBox">
+                <a href="">
+                    <p class="btn">Подробное описание проекта</p>
+                </a>
+                <a href="">
+                    <p class="btn">История создания проекта</p>
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="line">
+                <p>Лица проекта</p>
+            </div>
+            <p></p>
+        </div>
+        <div>
+            <div class="line">
+                <p>Партнеры</p>
+            </div>
+            <p></p>
+        </div>
+    </div>
 {% endblock %}

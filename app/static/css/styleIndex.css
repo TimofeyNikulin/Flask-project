@@ -1,103 +1,496 @@
-a {
-    text-decoration: none;
-    color: black;
+body {
+    height: 5020px;
+}
+
+.menu {
+    position: relative;
+    margin-top: 120px;
+    margin-left: 224px;
+}
+
+.elipse1 {
+    position: absolute;
+    width: 302px;
+    height: 449px;
+    top: 0px;
+    left: 0;
+    transition: all 1s;
+}
+
+.elipse2 {
+    position: absolute;
+    width: 517px;
+    height: 302px;
+    top: 298px;
+    left: 42px;
+    transition: all 1s;
+}
+
+.elipse3 {
+    position: absolute;
+    left: 298px;
+    top: 0px;
+    transition: all 1s;
+}
+
+.elipse1:hover {
+    top: -7.5px;
+    left: -7.5px;
+    transition: all 1s;
+}
+
+.elipse2:hover {
+    top: 313px;
+    left: 42px;
+    transition: all 1s;
+}
+
+.elipse3:hover {
+    left: 305.5px;
+    top: -7.5px;
+    transition: all 1s;
+}
+
+.elipseText1 {
+    width: 200px;
+    position: absolute;
+    bottom: 200px;
+    left: 60px;
+    color: #FFF;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    z-index: 1;
+}
+
+.elipseText2 {
+    width: 265px;
+    height: 156px;
+    position: absolute;
+    left: 125px;
+    bottom: 75px;
+    color: #FFF;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    z-index: 1;
+}
+
+.elipseText3 {
+    width: 200px;
+    position: absolute;
+    bottom: 205px;
+    left: 20px;
+    color: #FFF;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    z-index: 1;
+}
+
+.leftSide {
+    width: 50%;
+}
+
+.rightSide {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.firstPart {
+    display: flex;
+    height: 880px;
 }
 
 .card {
-    height: 900px;
-    width: 350px;
-    float: left;
-    margin-left: 100px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    color: white;
-    display: grid;
-    grid-template-columns: 350px;
-    transition: 0.4s ease;
+    width: 475px;
+    height: 200px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, rgba(132, 206, 235, 0.30) 0%, rgba(136, 96, 208, 0.30) 95.16%);
+    padding: 15px 15px 15px 15px;
+    color: #000000;
 }
 
-.firstCard {
-    background-color: #3B367C;
-    height: 550px;
-    transition: 0.4s ease;
+.headOfCard {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 5px;
 }
 
-.secondCard {
-    background-color: #E30B22;
-    height: 550px;
-    transition: 0.4s ease;
-}
-
-.thirdCard {
-    background-color: #EB5436;
-    height: 550px;
-    transition: 0.4s ease;
-}
-
-.circle {
-    height: 350px;
-    border-radius: 50% 50% 0 0;
-    transition: 0.4s ease;
-}
-
-img {
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    object-fit: cover;
-    transition: 0.4s ease;
-}
-
-.card h1 {
-    margin: 0 auto;
-    text-align: center;
-    justify-self: center;
+.headOfCard h2 {
+    margin-right: 15px;
 }
 
 .card p {
-    margin: 0 auto;
     font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 430px;
+}
+
+.secondPart {
+    width: 100%;
+    height: 964px;
+    overflow: hidden;
+}
+
+.backImage1 {
+    margin-top: -200px;
+}
+
+.front1 {
+    height: 964px;
+    width: 100%;
+    position: absolute;
+    background: rgba(31, 67, 255, 0.50);
+    z-index: 0;
+    display: flex;
+    justify-content: space-around;
+    color: #FFF;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.mainPart {
+    position: absolute;
+    height: 964px;
+    width: 100%;
+    z-index: 1;
+}
+
+.card1 {
+    border-radius: 36px;
+    background: linear-gradient(90deg, rgba(134, 3, 3, 0.75) 0%, rgba(25, 0, 175, 0.75) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.front1 .firstCard {
+    width: 359px;
+    height: 384px;
+}
+
+.front1 .secondCard {
+    width: 386px;
+    height: 502px;
+}
+
+.front1 .fourthCard {
+    width: 386px;
+    height: 420px;
+    font-size: 32px;
+}
+
+.front1 .fifthCard {
+    width: 469px;
+    height: 382px;
+    font-size: 32px;
+}
+
+.front1 .thirdCard {
+    width: 314px;
+    height: 430px;
+    margin-top: 154px;
+}
+
+.front1 .thirdCard p {
+    color: #FFF;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.front1 .thirdCard > img {
+    width: 314px;
+    height: 314px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.front1 .firstCard > p {
+    width: 273px;
+}
+
+.front1 .secondCard > p {
+    width: 307px;
+}
+
+.front1 .fourthCard > p {
+    width: 277px;
+}
+
+.front1 .fifthCard > p {
+    width: 414px;
+}
+
+.front1 .thirdPart {
+    width: 100%;
+    height: 964px;
+    overflow: hidden;
+}
+
+.thirdPart {
+    width: 100%;
+    height: 964px;
+    overflow: hidden;
+}
+
+.front2 {
+    height: 964px;
+    width: 100%;
+    position: absolute;
+    background: rgba(147, 96, 255, 0.60);
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #FFF;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    overflow: hidden;
+}
+
+.backImage2 {
+    margin-top: -450px;
+}
+
+.card2 {
+    border-radius: 36px;
+    background: linear-gradient(90deg, rgba(147, 96, 255, 0.70) 0%, rgba(132, 206, 235, 0.70) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.front2 .firstCard {
+    width: 432px;
+    height: 439px;
+}
+
+.front2 .secondCard {
+    width: 432px;
+    height: 473px;
+}
+
+.front2 .fourthCard {
+    width: 880px;
+    height: 400px;
+    font-size: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.front2 .fifthCard {
+    width: 466px;
+    height: 400px;
+}
+
+.front2 .thirdCard {
+    width: 454px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.front2 .thirdCard p {
+    color: #FFF;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.front2 .thirdCard > img {
+    width: 314px;
+    height: 314px;
+}
+
+.front2 .firstCard > p {
+    width: 376px;
+}
+
+.front2 .secondCard > p {
+    width: 397px;
+}
+
+.front2 .fourthCard > p {
+    width: 896px;
+    margin-left: 15px;
+}
+
+.front2 .fifthCard > p {
+    width: 429px;
+}
+
+.front3 {
+    height: 964px;
+    width: 100%;
+    position: absolute;
+    background: rgba(132, 206, 235, 0.45);
+    z-index: 0;
+    display: flex;
+    justify-content: space-around;
+    color: #FFF;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.card3 {
+    height: 55px;
+    border-radius: 15px;
+    background: rgba(132, 206, 235, 0.60);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.front3 .thirdCard {
+    margin-top: 160px;
+    width: 454px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.front3 .thirdCard img {
+    width: 323px;
+    height: 323px;
+}
+
+.front3 .thirdCard p {
+    margin-top: 20px;
+    font-size: 48px;
     text-align: center;
 }
 
-.square {
-    display: grid;
-    grid-template-columns: 350px;
-    transition: 0.4s ease;
-}
-
-.card:hover {
-    width: 375px;
-    height: 925px;
-    transition: 0.4s ease;
-    margin-top: 12.5px;
-    margin-bottom: 12.5px;
-}
-
-.card:hover .circle {
-    width: 375px;
-    height: 375px;
-    transition: 0.4s ease;
-}
-
-.card:hover .circle img {
+.fourthPart {
     width: 100%;
-    height: 375px;
-    transition: 0.4s ease;
-    margin: 0 auto;
+    height: 964px;
+    overflow: hidden;
 }
 
-.card:hover .square {
-    width: 375px;
-    height: 575px;
-    transition: 0.4s ease;
-    grid-template-columns: 375px;
+.fifthPart {
+    width: 100%;
+    height: 964px;
+    overflow: hidden;
 }
 
-.square h1 {
-    padding-top: 50px;
+.line {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(270deg, #0019F6 -2.85%, #780505 100%);
+    font-size: 36px;
+    color: #FFF;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
 }
 
-aside h1, aside p, aside h3 {
-    margin: 0;
+.textFourth {
+    padding-left: 15px;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 15px 0 15px 0;
+}
+
+.btn {
+    height: 45px;
+    width: 376px;
+    border-radius: 25px;
+    background: #84CEEB;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btnBox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 900px;
+    height: 80px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 }

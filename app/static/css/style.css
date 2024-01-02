@@ -4,236 +4,132 @@
 }
 
 body {
-    background-color: #EED1B0;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(86, 128, 233, 0.20) 0%, rgba(136, 96, 208, 0.20) 100%), linear-gradient(58deg, #84CEEB -15.34%, #C1C8E4 113.61%);
+    width: auto;
+    height: 1024px;
 }
 
-.content {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 20% 80%;
+nav {
+    background: linear-gradient(90deg, rgba(0, 41, 255, 0.08) 0%, rgba(0, 41, 255, 0.00) 44.9%);
+    height: 84px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-footer {
-    height: 100px;
-    background: linear-gradient(90deg, #5F1826, rgb(43, 43, 160))
+.navbar {
+    display: flex;
+    justify-content: space-between;
 }
 
-aside {
-    float: left;
-    background-color: #b9a48c;
-}
-
-main {
-    display: block;
-}
-  
-header {
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(90deg, #5F1826, rgb(43, 43, 160));
-}
-
-nav ul li {
-    position: relative;
-}
-
-nav ul li a {
-    display: inline-block;
-    background: #21216300;
-    color: #fff;
+li > a {
+    color: #FFF;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
     text-decoration: none;
-    border-radius: 3px;
-    font-size: 36px;
-    height: 70px;
-    transition: 0.4s ease;
-    padding-top: 30px;
-    width: 100%;
 }
 
-ul {
-    list-style: none;
-}
-
-nav ul li {
-    float: left;
-    margin-right: 30px;
-    text-align: center;
-    height: 100px;
-    transition: 0.4s ease;
-}
-
-nav ul li:hover {
-    float: left;
-    margin-right: 30px;
-    text-align: center;
-    height: 100px;
-    padding-left: 30px;
-    padding-right: 30px;
-    background-color: #4b131e;
-    transition: 0.4s ease;
-}
-
-nav ul li:hover a {
-    float: left;
-    margin-right: 30px;
-    text-align: center;
-    height: 70px;
-    background-color: #4b131e;
-    transition: 0.4s ease;
-}
-
-nav ul li > ul {
-    position: absolute;
-    display: none;
-    top: 100px;
-}
-
-li > ul > li {
-    width: 400px;
-    font-size: 10px;
-}
-
-li ul li a {
-    font-size: 24px;
-}
-
-.list:hover > ul > li {
-    float: none;
-}
-
-nav .list:hover .submenu {
-    display: block;
-    left: 0;
-    background: linear-gradient(90deg, #5F1826, rgb(43, 43, 160));
-    transition: 0.4s ease;
-    padding-bottom: 30px;
-}
-
-nav .list:hover .submenu li {
-    display: block;
-    left: 0;
-    background: linear-gradient(90deg, #5F1826, rgb(43, 43, 160));
-    transition: 0.4s ease;
-}
-
-nav .list:hover .submenu li a {
-    display: block;
-    left: 0;
-    background: linear-gradient(90deg, #5F1826, rgb(43, 43, 160));
-    transition: 0.4s ease;
-}
-
-nav .list:hover .submenu li:hover {
-    background: linear-gradient(90deg, #4b131e, rgb(33, 33, 121));
-    transition: 0.4s ease;
-}
-
-nav .list:hover .submenu li:hover a {
-    background: linear-gradient(90deg, #4b131e, rgb(33, 33, 121));
-    transition: 0.4s ease;
-}
-
-form {
-    width: 800px;
-    height: 800px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 15px;
-}
-
-form input {
-    height: 32px;
-    width: 50%;
-    background-color: #D9D9D9;
-    border-radius: 15px;
-    border: 1px solid black;
-    box-shadow: 5px 5px rgba(0, 0, 0, 0.7);
-}
-
-form input:hover {
-    height: 32px;
-    width: 50%;
-    background-color: #b1b1b1;
-    border-radius: 15px;
-}
-
-form label {
-    font-size: 48px;
-}
-
-.pole {
-    margin-left: 20px;
-    margin-top: 20px;
-    padding: 20px;
-}
-
-.input {
-    margin-top: 20px;
-}
-
-#submit {
-    background-color: #212163;
-    color: white;
-    margin: 0 auto;
-    font-size: 24px;
+li {
     height: 54px;
-    box-shadow: 0px 0px;
-}
-
-.submit {
-    width: 100%;
-    align-items: flex-start;
+    border-radius: 25px;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
-}
-
-.chat {
-    width: 100%;
-    border-radius: 15px;
-    height: 470px;
-    overflow-y: scroll;
-}
-
-h2 {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    align-items: center;
+    list-style: none;
     text-align: center;
-    cursor: default;
 }
 
-.message {
-    font-size: 24px;
+.partOfMenu {
+    box-shadow: inset -140px 0px 70px -70px #84ceeb00;
+    background-color: #8760d000;
+    margin: 0px;
+    transition: all 0.5s;
 }
 
-
-.send_message {
-    width: 90%;
-    height: 165px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 15px;
+.partOfMenu:hover {
+    box-shadow: inset -140px 0px 140px -90px #84CEEB;
+    background-color: #8860D0;
+    margin: 0 15px 0 15px;
+    transition: all 0.5s;
 }
 
-.send_message input {
-    margin-top: 20px;
-    margin-left: 20px;
-    width: 250px;
-    height: 50px;
+.list {
+    display: block;
+    z-index: 1;
 }
 
-.send_message input:hover {
-    margin-top: 20px;
-    margin-left: 20px;
-    width: 250px;
-    height: 50px;
+.documentsAll {
+    border-radius: 25px 25px 0 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset -140px 0px 70px -70px #84ceeb00;
+    background-color: #8760d000;
+    margin: 0px;
+    transition: all 0.5s;
 }
 
-.send_message button[type="button"] {
-    margin-top: 20px;
-    margin-left: 20px;
-    width: 50px;
-    height: 50px;
-    margin-right: 30px;
-    border-radius: 50%;
+.documentsAll:hover {
+    box-shadow: inset 0px 0px 70px -70px #84CEEB;
+    background-color: #8860D0;
+    margin: 0 15px 0 0;
+    transition: all 0.5s;
+}
+
+.submenu {
+    padding-inline-start: 0px;
+    height: 452px;
+    overflow: hidden;
+}
+
+.partOfSubmenu {
+    background: linear-gradient(270deg, #84CEEB -37.3%, #8860D0 140.08%);
+    margin-top: -452px;
+    transition: all 1s;
+}
+
+.forMenu {
+    border-radius: 25px 25px 0 0;
+    background: linear-gradient(270deg, #84CEEB -37.3%, #8860D0 140.08%);
+}
+
+.partOfSubmenuHover {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    background: linear-gradient(270deg, #84CEEB -37.3%, #8860D0 140.08%);
+    border-radius: 0 0 25px 25px;
+    width: 252px;
+    height: 452px;
+    justify-content: space-around;
+    transition: all 1s;
+}
+
+.textOfSubmenu {
+    color: #FFF;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 0 15px 0 15px;
+}
+
+.partsOfSubmenu:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+}
+
+.partsOfSubmenu {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.5s;
 }
