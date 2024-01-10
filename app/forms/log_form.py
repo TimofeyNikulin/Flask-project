@@ -4,6 +4,7 @@ from wtforms.validators import InputRequired
 
 
 class LogForm(FlaskForm):
-    email = EmailField(label="Почта:", name="email", id="email", validators=[InputRequired()])
-    password = PasswordField(label="Пароль:", name="password", id="password", validators=[InputRequired()])
-    remember_me = BooleanField(label="Запомнить меня", id='rememberMe')
+    email = EmailField(label="Почта:", name="email",
+                       id="email", validators=[InputRequired()])
+    password = PasswordField(
+        label="Пароль:", name="password", id="password", validators=[InputRequired()])

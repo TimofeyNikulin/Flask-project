@@ -2,6 +2,7 @@
 
 {% block head %} 
     <link rel="stylesheet" href="../static/css/styleForm.css">
+    <link rel="stylesheet" href="../static/css/stylePersonalDataForm.css">
 {% endblock %}
 
 {% block content %}
@@ -14,7 +15,7 @@
                 font-size: 36px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: normal;">Вход</h1>
+                line-height: normal;">Персональные данные</h1>
                 <div>
                     {{ form.csrf_token }}
                 </div>
@@ -28,15 +29,13 @@
                     </div>
                 {% endfor %} 
                 <div class="submit">
-                    <input type="submit" value="Войти" id="submit">
+                    <input type="submit" value="Схранить данные" id="submit">
                 </div>
-            </div>
-            <div>
-                <p class="if">Если у вас еще нет аккаунта, то вы можете <a style="text-decoration: none; color: #323294;" href="{{ url_for('register') }}">зарегистрироваться</a></p>
             </div>
             <div>
                 <p>{{ message }}</p>
             </div>         
-        </form>   
+        </form>
+        
     </div>
 {% endblock %}
